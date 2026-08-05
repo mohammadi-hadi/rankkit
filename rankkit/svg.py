@@ -14,6 +14,7 @@ why eta has to come from a swap experiment rather than from this picture.
 from __future__ import annotations
 
 from collections.abc import Sequence
+from decimal import ROUND_HALF_UP, Decimal
 from pathlib import Path
 
 W = 640
@@ -28,6 +29,15 @@ RADIUS = 4
 
 def _escape(text: str) -> str:
     return text.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
+def _percent(value: float) -> str:
+    """One decimal place, rounding a .5 tie up rather than to even.
+
+    Python's default would print an exact 1.25% as "1.2" and the explorer page
+    prints "1.3", which looks like two different numbers for the same data.
+    """
+    return str(Decimal(value * 100).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))
 
 
 def _bar_path(x0: float, x1: float, y: float, height: float, radius: float) -> str:
@@ -108,7 +118,7 @@ def bias_svg(
         )
         parts.append(
             f'<text class="dim num" x="{W - RIGHT + 8}" y="{y + BAR - 2}" '
-            f'font-size="11.5">{share * 100:.1f}%</text>'
+            f'font-size="11.5">{_percent(share)}%</text>'
         )
 
     baseline = PAD_TOP + ROW * len(shares)

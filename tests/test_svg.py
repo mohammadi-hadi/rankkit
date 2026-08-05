@@ -55,3 +55,11 @@ def test_write_svg_round_trips(tmp_path):
     path = tmp_path / "bias.svg"
     write_svg(path, bias_svg(SHARES))
     assert path.read_text(encoding="utf-8").startswith("<svg")
+
+
+def test_a_half_percent_tie_rounds_up_to_match_the_explorer():
+    # 5 clicks in 400 impressions is exactly 1.25%, where Python's default
+    # round-half-even would print 1.2 and the page's JS prints 1.3.
+    markup = bias_svg([0.5, 5 / 400])
+    assert "1.3%" in markup
+    assert "1.2%" not in markup

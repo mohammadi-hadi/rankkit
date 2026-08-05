@@ -65,6 +65,25 @@ varies. Queries with no relevant document are skipped rather than scored zero,
 following trec_eval, and the count is printed so a silently shrinking
 denominator cannot flatter a run.
 
+### Handing the scores to abeval
+
+`--per-query` writes one `{"id", "score"}` line per query, which is
+[abeval](https://github.com/mohammadi-hadi/abeval)'s input format with no flags
+needed:
+
+```
+$ rankkit eval examples/run_a.jsonl --metric ndcg --per-query a.jsonl
+$ rankkit eval examples/run_b.jsonl --metric ndcg --per-query b.jsonl
+$ abeval compare a.jsonl b.jsonl
+A: 0.826   B: 0.8617   (n=399 paired items)
+B - A: +0.03573  [+0.0143, +0.05671]  (95% CI)
+p (sign-flip permutation): 0.0010   p (paired t): 0.0011
+verdict: significant at the chosen level
+```
+
+Same verdict, reached by a separate implementation — the small differences are
+resampling noise from different seeds and repetition counts.
+
 ## My only labels are clicks
 
 This is where offline ranking evaluation usually goes wrong. A click means the
