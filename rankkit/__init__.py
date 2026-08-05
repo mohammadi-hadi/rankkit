@@ -1,0 +1,77 @@
+"""Ranking evaluation with error bars and position-bias correction."""
+
+from .bias import (
+    Diagnostics,
+    Estimate,
+    SensitivityRow,
+    clicks_by_rank,
+    crossover,
+    diagnose,
+    estimate,
+    logged_policy,
+    policy_from,
+    propensity,
+    rank_weight,
+    sensitivity,
+)
+from .compare import Comparison, bootstrap_ci, paired_compare, permutation_p
+from .data import (
+    ClickQuery,
+    Run,
+    align,
+    extract_clicks,
+    extract_runs,
+    read_jsonl,
+)
+from .metrics import (
+    METRICS,
+    average_precision,
+    dcg,
+    err,
+    hit_rate,
+    mrr,
+    ndcg,
+    precision_at_k,
+    recall_at_k,
+    score,
+    scores,
+)
+
+__version__ = "0.1.0"
+
+__all__ = [
+    "METRICS",
+    "ClickQuery",
+    "Comparison",
+    "Diagnostics",
+    "Estimate",
+    "Run",
+    "SensitivityRow",
+    "__version__",
+    "align",
+    "average_precision",
+    "bootstrap_ci",
+    "clicks_by_rank",
+    "crossover",
+    "dcg",
+    "diagnose",
+    "err",
+    "estimate",
+    "extract_clicks",
+    "extract_runs",
+    "hit_rate",
+    "logged_policy",
+    "mrr",
+    "ndcg",
+    "paired_compare",
+    "permutation_p",
+    "policy_from",
+    "precision_at_k",
+    "propensity",
+    "rank_weight",
+    "read_jsonl",
+    "recall_at_k",
+    "score",
+    "scores",
+    "sensitivity",
+]

@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If rankkit is useful in your work, please cite this repository."
+title: "rankkit: ranking evaluation with error bars and position-bias correction"
+type: software
+authors:
+  - family-names: Mohammadi
+    given-names: Hadi
+version: 0.1.0
+date-released: 2026-08-05
+license: MIT
+repository-code: "https://github.com/mohammadi-hadi/rankkit"
+keywords:
+  - ranking
+  - information-retrieval
+  - evaluation
+  - position-bias
+  - learning-to-rank
