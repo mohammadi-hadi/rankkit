@@ -11,6 +11,8 @@ is measuring *what your current ranker put on top*, and it will quietly tell you
 that every candidate is worse than production. Standard library only, no
 dependencies.
 
+**Position-bias explorer:** https://mohammadi.cv/rankkit/
+
 ## Install
 
 ```
@@ -229,6 +231,13 @@ trustworthy: [GitHub Sponsors](https://github.com/sponsors/mohammadi-hadi).
   accuracy without gold labels.
 - [raterkit](https://github.com/mohammadi-hadi/raterkit) — audit the human
   annotations underneath everything above.
+
+## Citing
+
+Releases are archived on Zenodo. Cite the concept DOI
+[10.5281/zenodo.21811914](https://doi.org/10.5281/zenodo.21811914), which always
+resolves to the latest version; structured metadata is in
+[CITATION.cff](CITATION.cff).
 
 ## License
 

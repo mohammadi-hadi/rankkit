@@ -36,6 +36,8 @@ dev = ["pytest", "ruff", "build"]
 
 [project.urls]
 Homepage = "https://github.com/mohammadi-hadi/rankkit"
+Explorer = "https://mohammadi.cv/rankkit/"
+DOI = "https://doi.org/10.5281/zenodo.21811914"
 
 [project.scripts]
 rankkit = "rankkit.__main__:main"
