@@ -3,6 +3,11 @@
 Ranking evaluation with error bars, and click metrics that survive contact with
 position bias.
 
+[![CI](https://github.com/mohammadi-hadi/rankkit/actions/workflows/test.yml/badge.svg)](https://github.com/mohammadi-hadi/rankkit/actions/workflows/test.yml)
+[![PyPI](https://img.shields.io/pypi/v/rankkit)](https://pypi.org/project/rankkit/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21811914.svg)](https://doi.org/10.5281/zenodo.21811914)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 Offline ranking numbers get reported as bare points: "NDCG@10 went from 0.826 to
 0.862, ship it." Two things are usually missing. The first is an interval — on a
 few hundred queries, differences smaller than that are routinely noise. The
