@@ -246,19 +246,11 @@ trustworthy: [GitHub Sponsors](https://github.com/sponsors/mohammadi-hadi).
 - Doubly-robust estimation, which uses a relevance model to cut the variance
   that inverse propensity scoring alone leaves behind.
 
-## Related projects
+## Part of evalstack
 
-- [abeval](https://github.com/mohammadi-hadi/abeval) — A/B-test statistics for
-  LLM evals. The paired machinery here is the same, applied to ranking metrics;
-  `rankkit eval --per-query` writes scores in abeval's input format.
-- [calikit](https://github.com/mohammadi-hadi/calikit) — whether the
-  probabilities behind your scores are calibrated at all.
-- [judgekit](https://github.com/mohammadi-hadi/judgekit) — audit an LLM judge
-  before you let it label a ranking.
-- [judgepanel](https://github.com/mohammadi-hadi/judgepanel) — estimate judge
-  accuracy without gold labels.
-- [raterkit](https://github.com/mohammadi-hadi/raterkit) — audit the human
-  annotations underneath everything above.
+[evalstack](https://github.com/mohammadi-hadi/evalstack) is the map of these
+eleven evaluation tools: what each one measures, what it found on real data,
+and the two chains that run end to end.
 
 ## Citing
 
