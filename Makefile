@@ -30,8 +30,8 @@ build:
 	git archive HEAD | tar -x -C "$$export_dir" && \
 	.venv/bin/python -m build --outdir dist "$$export_dir" && \
 	rm -rf "$$export_dir"
-	@if tar -tzf dist/*.tar.gz | grep -qiE 'claude|gitignore'; then \
+	@if tar -tzf dist/*.tar.gz | grep -vE '^rankkit-[0-9.]+/((rankkit|tests|examples|docs|\.github)/.*|LICENSE|README\.md|pyproject\.toml|PKG-INFO|Makefile|CITATION\.cff)?$$' | grep -q .; then \
 		echo "TAINTED SDIST"; exit 1; fi
-	@if unzip -l dist/*.whl | grep -qiE 'claude|gitignore'; then \
+	@if unzip -Z1 dist/*.whl | grep -vE '^rankkit(-[0-9.]+\.dist-info)?/' | grep -q .; then \
 		echo "TAINTED WHEEL"; exit 1; fi
 	@echo "artifacts clean:" && ls dist
