@@ -246,6 +246,12 @@ trustworthy: [GitHub Sponsors](https://github.com/sponsors/mohammadi-hadi).
 - Doubly-robust estimation, which uses a relevance model to cut the variance
   that inverse propensity scoring alone leaves behind.
 
+## Related
+
+- [spark-search-ranking](https://github.com/mohammadi-hadi/spark-search-ranking):
+  counterfactual learning-to-rank training on click logs in PySpark, with
+  propensities estimated from a randomised explore slice.
+
 ## Part of evalstack
 
 [evalstack](https://github.com/mohammadi-hadi/evalstack) is the map of these
