@@ -6,7 +6,7 @@
 [![PyPI](https://img.shields.io/pypi/v/rankkit)](https://pypi.org/project/rankkit/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21811914.svg)](https://doi.org/10.5281/zenodo.21811914)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/mohammadi-hadi/rankkit/blob/main/LICENSE)
 
 *Ranking evaluation with error bars, and click metrics that survive contact with position bias.*
 
@@ -151,7 +151,7 @@ $ rankkit bias examples/clicks.jsonl examples/run_b.jsonl --clip 0.1
 ```
 
 `--svg` writes the click-through curve with the assumed examination model drawn
-over it ([examples/bias.svg](examples/bias.svg)).
+over it ([examples/bias.svg](https://github.com/mohammadi-hadi/rankkit/blob/main/examples/bias.svg)).
 
 ### Where eta comes from
 
@@ -257,8 +257,8 @@ and the two chains that run end to end.
 Releases are archived on Zenodo. Cite the concept DOI
 [10.5281/zenodo.21811914](https://doi.org/10.5281/zenodo.21811914), which always
 resolves to the latest version; structured metadata is in
-[CITATION.cff](CITATION.cff).
+[CITATION.cff](https://github.com/mohammadi-hadi/rankkit/blob/main/CITATION.cff).
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT — see [LICENSE](https://github.com/mohammadi-hadi/rankkit/blob/main/LICENSE).
