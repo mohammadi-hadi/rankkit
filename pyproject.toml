@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "rankkit"
-version = "0.1.0"
+version = "0.1.1"
 description = "Ranking evaluation with error bars: NDCG, MRR and MAP with confidence intervals, plus position-bias correction for click logs"
 readme = "README.md"
 requires-python = ">=3.10"
